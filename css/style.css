@@ -57,7 +57,9 @@ a {
 .neutral-star {
   color: var(--main-bg-color);
 }
-
+section {
+  margin-bottom: 20px;
+}
 /*********************** HEADER ***************************/
 nav {
   display: flex;
@@ -73,15 +75,95 @@ nav ul {
   list-style: none;
   gap: 68px;
 }
-nav a {
-  text-decoration: none;
-  font-size: 16px;
+nav li a {
+  border-top: 2px solid transparent;
   padding-top: 25px;
 }
+
 nav li a:hover {
-  font-weight: bold;
-  border-top: 2px solid #0065fc;
   color: #0065fc;
+  border-top-color: #0065fc;
+}
+/***************************** searchContainer **************************/
+#searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+#searchContainer p {
+  font-size: 16px;
+}
+/***** searchBar *********/
+#searchBar {
+  display: inline-flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 400px;
+}
+#searchLogo {
+  padding: 15px;
+  background: #c5c5c5;
+  width: 22px;
+  border-radius: 15px 0 0 15px;
+}
+.fa-location-dot {
+  color: black;
+}
+#searchBar input {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+#searchBar button {
+  background: #0065fc;
+  border: none;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+/***** searchFiltre *********/
+#searchfitre {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+}
+#searchfitre button {
+  border-radius: 40px;
+  border: 1px solid gainsboro;
+  background: white;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+#searchfitre .fa-solid {
+  margin-right: 8px;
+}
+#searchfitre button:hover {
+  background: #dbf0ff;
+}
+/***** searchInfo *********/
+#searchInfo p {
+  margin: 0;
+}
+.fa-info {
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
