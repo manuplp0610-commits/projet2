@@ -240,10 +240,11 @@ nav li a:hover {
 .btnPlus {
   border: none;
   font-weight: bold;
-  margin-top: 40px;
+  margin-top: 30px;
   cursor: pointer;
   background: transparent;
 }
+/****** Populaires ***********/
 .populaires-title {
   display: flex;
   justify-content: space-between;
@@ -283,7 +284,7 @@ nav li a:hover {
 .populaires-cards .card-rating {
   margin-bottom: 5px;
 }
-/****** Populaires ***********/
+
 .populaires {
   width: 32%;
   background: var(--main-bg-color);
@@ -328,7 +329,42 @@ nav li a:hover {
 .populaires-cards .card-rating {
   margin-bottom: 5px;
 }
+/* **********Activity ***************/
+.activityContainer {
+  padding: 30px;
+}
 
+.activityTitle h2 {
+  margin-bottom: 20px;
+}
+.activityCards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.activityCards a {
+  display: block;
+  width: 23%;
+  text-decoration: none;
+  color: inherit;
+}
+.activityCards .card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+.activityCards img {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px 20px 0 0;
+}
+.activityCards .card-content {
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -368,6 +404,9 @@ nav li a:hover {
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
+  }
+  .activityCards img {
+    height: 200px;
   }
 }
 
@@ -427,6 +466,12 @@ nav li a:hover {
   .hebergements {
     background: white;
   }
+  .hebergements h2 {
+    margin-bottom: 30px;
+  }
+  .btnPlus {
+    font-size: 18px;
+  }
   .hebergements-and-populaires {
     flex-direction: column-reverse;
   }
@@ -456,5 +501,12 @@ nav li a:hover {
     border-radius: 15px;
     display: block;
     width: 55px;
+  }
+  .activityCards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .activityCards a {
+    width: 100%;
   }
 }
