@@ -17,6 +17,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .main-container {
@@ -370,6 +371,7 @@ footer {
   display: flex;
   gap: 30px;
   background: var(--main-bg-color);
+  overflow: hidden;
 }
 footer h4 {
   margin: 0;
