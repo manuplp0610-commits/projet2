@@ -24,6 +24,9 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 a {
@@ -66,19 +69,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 79px;
 }
 #logo img {
   height: 19px;
 }
 nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
   gap: 68px;
 }
 nav li a {
   border-top: 2px solid transparent;
-  padding-top: 27px;
+  padding: 14px;
 }
 
 nav li a:hover {
@@ -91,9 +94,7 @@ nav li a:hover {
   flex-direction: column;
   gap: 35px;
 }
-#searchContainer p {
-  font-size: 16px;
-}
+
 /***** searchBar *********/
 #searchBar {
   display: inline-flex;
@@ -133,24 +134,46 @@ nav li a:hover {
 /***** searchFiltre *********/
 #searchTitle h2 {
   font-size: 22px;
+  margin: 0;
+}
+#searchTitle p {
+  margin: 0;
+  margin-top: 5px;
 }
 #searchfitre {
-  height: 50px;
   display: flex;
   align-items: center;
   font-weight: bold;
   gap: 8px;
 }
+#searchfitre p {
+  font-size: 18px;
+}
 #searchfitre button {
   border-radius: 40px;
-  border: 1px solid gainsboro;
+  height: 50px;
+  border: 2px solid var(--main-bg-color);
   background: white;
   font-weight: bold;
-  padding: 10px;
+  font-size: 17px;
+  padding: 4px 19px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.filterBtn,
+.filters-list {
+  display: flex;
+  gap: 15px;
+}
+.filters-list {
+  flex-wrap: wrap;
 }
 #searchfitre .fa-solid {
   margin-right: 8px;
+  font-size: 20px;
 }
 #searchfitre button:hover {
   background: #dbf0ff;
@@ -158,6 +181,9 @@ nav li a:hover {
 /***** searchInfo *********/
 #searchInfo p {
   margin: 0;
+}
+#searchInfo i {
+  margin-right: 7px;
 }
 .fa-info {
   border: 1px solid gainsboro;
@@ -173,6 +199,7 @@ nav li a:hover {
 .hebergements-and-populaires {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .hebergements-and-populaires section {
@@ -344,6 +371,41 @@ nav li a:hover {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+  .main-container {
+    gap: 0;
+    padding: 30px 0;
+  }
+  main {
+    padding: 10px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav .menu {
+    margin-top: 0;
+  }
+  nav ul {
+    width: 100%;
+    gap: 0;
+    border-bottom: 1px solid var(--filter-bg-color);
+    padding: 0;
+  }
+  nav li {
+    padding: 30px;
+  }
+  ul li:hover {
+    border-bottom: 2px solid var(--main-color);
+  }
+  nav li a:hover {
+    border-top-color: transparent;
+  }
+  .filterBtn {
+    width: 100%;
+    font-size: 14px;
+  }
+  .filterBtn button {
+    width: 100%;
+  }
   .hebergements-and-populaires {
     flex-direction: column-reverse;
   }
